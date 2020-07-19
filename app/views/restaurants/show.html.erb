@@ -1,0 +1,10 @@
+<h1><%= @restaurant.name.capitalize %></h1>
+<%= link_to "add", new_restaurant_path %>
+<%= link_to "leave a review", new_restaurant_review_path(@restaurant)  %>
+
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+
+</ul>

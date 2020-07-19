@@ -1,0 +1,16 @@
+<div class="container ">
+  <h1>Restaurants</h1>
+  <div class="aligned-left">
+    <%= link_to "+ add a new restaurant", new_restaurant_path %>
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+      <div class="form-check">
+        <label class="form-check-label" for="defaultCheck1">
+          <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
+        </label>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
